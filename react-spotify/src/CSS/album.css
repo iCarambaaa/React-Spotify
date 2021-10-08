@@ -1,0 +1,48 @@
+body {
+  background: rgb(95, 33, 76);
+  background: linear-gradient(
+    180deg,
+    rgba(95, 33, 76, 1) 20%,
+    rgba(18, 18, 18, 1) 55%
+  ) !important;
+}
+
+.op {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.op:hover {
+  cursor: pointer;
+  background-color: rgba(95, 15, 15, 0.2);
+}
+
+h5 {
+  color: white;
+}
+
+.smallfont {
+  font-size: smaller;
+}
+svg {
+  color: white;
+}
+.jumbotron {
+  margin-left: 280px;
+  margin-right: 0;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+td p,
+td,
+th {
+  font-size: 13px;
+  margin: 0;
+  color: #969696;
+}
+
+td h6 {
+  color: #f4f4f4;
+  margin: 0;
+  font-size: medium !important;
+}
