@@ -14,6 +14,7 @@ function App() {
     <div>
       <Router>
       <Sidebar></Sidebar>
+      <Route path="/" exact component={Home} />
 
 
 
