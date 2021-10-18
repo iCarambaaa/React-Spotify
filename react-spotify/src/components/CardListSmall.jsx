@@ -9,12 +9,24 @@ class CardListSmall extends Component {
   };
 
   componentDidMount = async () => {
-    const response = await fetch(
-      "https://striveschool-api.herokuapp.com/api/deezer/search?q=" +
-        this.props.query
-    );
-    const data = await response.json();
-    this.setState({ songs: data.data, loading: false });
+    try {
+      const response = await fetch(
+        "https://striveschool-api.herokuapp.com/api/deezer/search?q=" +
+          this.props.query
+      );
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data);
+        const sliced = data.data.slice(0, 8);
+        this.setState({ songs: sliced, loading: false });
+      } else {
+        console.log("something not right here");
+        this.setState({ loading: false });
+      }
+    } catch (error) {
+      console.log("here is our error:");
+      console.log(error);
+    }
   };
 
   render() {
