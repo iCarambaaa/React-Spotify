@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Home from "./components/Home"
-import Artist from "./components/Artist"
-import Album from "./components/Album"
+import Artist from "./components/Artist/Artist"
+import Album from "./components/Album/Album"
 import Sidebar from "./components/Sidebar"
 import BottomPlayer from "./components/BottomPlayer"
 
@@ -15,6 +15,8 @@ function App() {
       <Router>
       <Sidebar></Sidebar>
       <Route path="/" exact component={Home} />
+      <Route path="/album" exact component={Album} />
+      <Route path="/artist" exact component={Artist} />
 
 
 

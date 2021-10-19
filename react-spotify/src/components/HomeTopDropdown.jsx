@@ -1,4 +1,5 @@
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 import Dropdown from "react-bootstrap/Dropdown";
 
@@ -28,8 +29,10 @@ export default function HomeTopDropdown() {
               Danzo26...
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item>Album</Dropdown.Item>
-              <Dropdown.Item>Artist</Dropdown.Item>
+              <Dropdown.Item>
+                <Link to="album">Album</Link>
+              </Dropdown.Item>
+              <Link to="artist">artist</Link>
               <Dropdown.Item>Login</Dropdown.Item>
               <Dropdown.Item>Deezer API</Dropdown.Item>
               <Dropdown.Item>Support</Dropdown.Item>

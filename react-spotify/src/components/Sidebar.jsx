@@ -1,4 +1,4 @@
-import { withRouter, Link } from "react-router";
+import { withRouter, Link } from "react-router-dom";
 import "../CSS/sidebar.css";
 // import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css";
 
@@ -6,22 +6,23 @@ const Sidebar = () => {
   return (
     <>
       <nav className=" sidebar flex-column fixed-left navbar-dark mb-5 pb-5">
-        <div className="container ml-3 ">
-          <a className="navbar-brand my-4" href="./index.html">
+        <div className="container m-3 ">
+          <Link to="" className="pb-3">
             <img
               src="/assets/Spotify_Logo_RGB_White.png"
               className="firstlogo"
               alt=""
               style={{ width: "200px" }}
             />
-          </a>
-          <div className=" main-menu " id="navbarSupportedContent">
+          </Link>
+
+          <div className=" main-menu mt-4 " id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link to="">
                   <i className="bi bi-house-door-fill"></i>
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
